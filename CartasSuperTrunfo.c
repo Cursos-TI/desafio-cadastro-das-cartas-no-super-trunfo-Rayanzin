@@ -16,9 +16,10 @@ int main() {
     float area_km2_2;
     float pib_bilhoes2;
     int num_pontos_turisticos2;
-
+    
+    
     printf("--- Inserir dados da Carta 1 ---\n");
-
+    
     // Coleta dados da Carta 1
     printf("Estado (A-H): ");
     scanf(" %c", &estado1);
@@ -34,11 +35,11 @@ int main() {
     scanf("%f", &pib_bilhoes1);
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &num_pontos_turisticos1);
-
+    
     printf("\n--- Inserir dados da Carta 2 ---\n");
-
+    
     // Coleta dados da Carta 2
-
+    
     printf("Estado (A-H): ");
     scanf(" %c", &estado2);
     printf("Codigo da Carta (ex: A01): ");
@@ -53,10 +54,16 @@ int main() {
     scanf("%f", &pib_bilhoes2);
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &num_pontos_turisticos2);
+    
+    float DensidadePopulacional1 = populacao1 / area_km2_1;
+    float DensidadePopulacional2 = populacao2 / area_km2_2;
+    
+    float PIB_per_Capita1 = pib_bilhoes1 / populacao1;
+    float PIB_per_Capita2 = pib_bilhoes2 / populacao2;
 
     // Exibir informações das cartas
     printf("\n--- Informacoes das Cartas ---\n");
-
+    
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Codigo: %s\n", codigo_carta1);
@@ -65,7 +72,9 @@ int main() {
     printf("Area: %.2f km^2\n", area_km2_1);
     printf("PIB: %.2f bilhoes de reais\n", pib_bilhoes1);
     printf("Numero de Pontos Turisticos: %d\n", num_pontos_turisticos1);
-
+    printf("Densidade Populacional: %.1f hab/km² \n", DensidadePopulacional1);
+    printf("Pib per capta %.1f Reais \n", PIB_per_Capita1);
+    
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Codigo: %s\n", codigo_carta2);
@@ -74,6 +83,8 @@ int main() {
     printf("Area: %.2f km^2\n", area_km2_2);
     printf("PIB: %.2f bilhoes de reais\n", pib_bilhoes2);
     printf("Numero de Pontos Turisticos: %d\n", num_pontos_turisticos2);
-
+    printf("Densidade Populacional: %.1f hab/km² \n", DensidadePopulacional2);
+    printf("Pib per capta %.1f Reais \n ", PIB_per_Capita2);
+    
     return 0;
 }
